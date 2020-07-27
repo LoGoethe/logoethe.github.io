@@ -1,0 +1,118 @@
+nav {
+    font-size: 15px;
+}
+div {
+    overflow-x: auto; /*lets table scroll if window isnt wide enough */
+}
+#imgbackground {
+    position: absolute;
+    top: 500px;
+    z-index: -1; /* puts image behind other elements*/
+    opacity: 0.6;
+    
+}
+table, th, td {
+    border: 2px solid blue;
+    border-collapse: collapse; /*makes all table border become ONE*/
+    padding: 1rem;
+}
+table {
+    margin: 25px 10rem;
+    background-color: white;
+    width: 100rem;
+    caption-side: bottom;
+}
+tr:nth-child(even) { /*makes alternating table rows a diff color*/
+    background-color: aquamarine;
+}
+tr:hover { /*changes table rows on hover */
+    background-color: aqua;
+}
+th {
+    background-color: burlywood;
+    color: white;
+}
+h1 {
+    color: red;
+    font-family: monospace, fantasy;
+    text-decoration: underline;
+    font-weight: 700; /*This is the weight of bold text, 400 is regular*/
+}
+p,
+ol
+{
+    text-indent: 1em;
+    text-align: justify;
+    background-color: rgb(255,255,255)
+}
+blockquote {
+    text-align: center;
+    font-size: 2vw;
+    font-style: italic;
+}
+a {
+    text-decoration: none;
+}
+body {
+    background-color: papayawhip;
+}
+/*ID selectors can only target a single element!*/
+#section_1 {
+    font-size: 2rem;
+}
+/*Class selectors target all elements with that class!*/
+ .nav {
+    text-decoration:underline; 
+    color: rgb(145,70,40); 
+    font-weight: bold;
+    padding: 20px;
+}
+/*Descendant selectors target every instance of an element that is contained within another element*/
+body p {
+    color:blue;
+}
+/*Child selectors target only one level down from parent, not all levels below like descendant*/
+article > em {
+    font-size: 2em;
+    color: purple;
+}
+
+/*
+MEASUREMENT UNITS! 
+px: Pixels 1/96 of an inch
+pt: Points 1/72 of an inch
+em: (relative) Element is element's default, inherited, or defined font size
+rem: (relative) Root element is the font size of the root element of the web page
+vw: (relative) Viewport width is 1/100th of the current width of the browser's content area
+vh: (relative) Viewport height is 1/100th of the current height of the browser's content area 
+*/
+
+/*
+COLOR ENTRY!
+Keywords: red, yellow, papayawhip
+Rgb() function takes 3 values between 0 and 255 to produce 16 million colors
+RGb Code is 6-degit value that takes the form #rrggbb with each 2-digit unit in hexadecimal
+All 3 of the following declarations produce the same color:
+color: tomato;
+color: rgb(255, 99, 71);
+color: #ff6347;
+*/
+
+/*
+INHERITANCE - ascending order of importance:
+1. Browser styles
+2. User-specified styles
+3. External style sheets
+4. Internal style sheets
+5. Inline styles
+*/
+
+/*
+SPECIFICITY - two or more style rules from the same source targeting element
+1. One point for each element
+2. 10 points for each class in the selector
+3. 100 points for each ID in the selector
+4. 1,000 points if selector is part of an inline style
+Use this to troubleshoot the location of styling errors.
+*/
+
